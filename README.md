@@ -7,7 +7,7 @@ A tiny javascript templating engine
 HTML code:
 ```
 <div id="template">
-    <p>{{paraGraphText}}</p>
+    <p>{{paragraphText}}</p>
 </div>
 
 ```
@@ -15,10 +15,10 @@ HTML code:
 JavaScript code:
 ```
 let data = [
-    {paraGraphText : "Lorem ipsum1"},
-    {paraGraphText : "Lorem ipsum2"},
-    {paraGraphText : "Lorem ipsum3"},
-    {paraGraphText : "Lorem ipsum4"}
+    {paragraphText : "Lorem ipsum1"},
+    {paragraphText : "Lorem ipsum2"},
+    {paragraphText : "Lorem ipsum3"},
+    {paragraphText : "Lorem ipsum4"}
 ];
 
 let template = document.getElementById("template");
