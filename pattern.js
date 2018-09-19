@@ -2,15 +2,14 @@ let Pattern = {
     render : function (template, data) {
         let result = "";
 
-        for (var row of data) {
+        for (let row of data) {
             let temp = template;
-            let properties = Object.keys(row);
 
-            for (var property of properties) {
+            Object.keys(row).forEach((property, index) => {
                 let replace = "{{" + property + "}}";
-                let regexp = new RegExp(replace, "g");
+                let regexp = new RegExp("{{" + property + "}}", "g");
                 temp = temp.replace(regexp, row[property]);
-            }
+            });
 
             result += temp + "\n";
         }
