@@ -2,7 +2,7 @@ export class Pattern {
     constructor() {}
 
     render(template, data) {
-        let result;
+        let result = "";
 
         for (let row of data) {
             let temp = template;
