@@ -1,6 +1,8 @@
-let Pattern = {
-    render : function (template, data) {
-        let result = "";
+export class Pattern {
+    constructor() {}
+
+    render(template, data) {
+        let result;
 
         for (let row of data) {
             let temp = template;
@@ -16,4 +18,4 @@ let Pattern = {
 
         return result;
     }
-};
+}
