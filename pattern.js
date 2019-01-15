@@ -6,12 +6,11 @@ export class Pattern {
 
         for (let row of data) {
             let temp = template;
-
-            Object.keys(row).forEach((property, index) => {
-                let replace = "{{" + property + "}}";
-                let regexp = new RegExp("{{" + property + "}}", "g");
-                temp = temp.replace(regexp, row[property]);
-            });
+            for (let i = 0, keys = Object.keys(row); i < keys.length; i++) {
+                let replace = "{{" + keys[i] + "}}",
+                    regexp = new RegExp("{{" + keys[i] + "}}", "g");
+                temp = temp.replace(regexp, row[keys[i]]);
+            }
 
             result += temp + "\n";
         }
